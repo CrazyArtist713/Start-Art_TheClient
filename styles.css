@@ -340,9 +340,10 @@ form input:focus,
 form select:focus{
   border-color: #ffc3ca;
 }
-.courses { 
+.courses{ 
   display: flex; 
   flex-direction: row; 
+  flex-wrap: wrap;
   justify-content: center; 
   gap: 2rem; 
   margin: 4rem 5rem; 
@@ -404,6 +405,20 @@ form select:focus{
   font-size: 1rem;
   line-height: 1.5;
 }
+.courses h2{ 
+  width: 100%;
+  font-family: "franklin-gothic-atf", sans-serif; 
+  font-weight: 600; 
+  font-size: 2rem; 
+  color: #9fd3ff; 
+  margin-bottom: 0; 
+}
+.courses hr {
+    width: 100%;
+    border: 1px solid #9fd3ff; 
+    margin-bottom: 1rem; 
+    border-radius: 1rem; 
+}
 .workshops{ 
     background-color: #9fd3ff; 
     border-radius: 3rem; 
@@ -417,28 +432,41 @@ form select:focus{
     flex-direction: column;
     gap: 1.5rem;
     margin-top: 1.5rem;
-    
+
 }
 .voice, .ideas, .teamwork{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    background-size: cover;
-    background-position: center;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 2rem 0 0;
+  border-radius: 1.5rem; 
+  background-size: cover; 
+  background-position: center; 
+  overflow: hidden;
 }
 .voice{
-    background-image: url(Images/matt-botsford-OKLqGsCT8qs-unsplash-1024x576.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(Images/matt-botsford-OKLqGsCT8qs-unsplash-1024x576.jpg);
     border: 4px solid #003270;
 }
 .teamwork{
-    background-image: url(Images/workshopd-1024x683.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),  url(Images/workshopd-1024x683.jpg);
     border: 4px solid #003270;
 } 
 .ideas{
-    background-image: url(Images/project.svg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(Images/project.svg);
     border: 4px solid #003270;
+}
+.ideas h3, .voice h3, .teamwork h3{
+    margin: 0;
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+}
+.ideas h3:hover, .voice h3:hover, .teamwork h3:hover{
+    background-color: #003270;
+    color: #ffffff;   
 }
 .workshop-cards img{
     width: 3rem;
@@ -446,6 +474,72 @@ form select:focus{
 .workshops hr{
     border: 2px solid #003270;
     border-radius: 1rem;
+}
+.partners {
+    background-color: #1a64b5; 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.partners > h2, 
+.partners > hr, 
+.partners > img {
+    color: white;
+    margin-bottom: 20px;
+}
+.companies{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.block-purple {
+    background-color: #b189c6; 
+    border-radius: 24px; 
+    overflow: hidden; 
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Tw Cen MT', sans-serif;
+}
+.block-purple a {
+    text-decoration: none;
+    color: #552d70;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-weight: 580;
+    font-size: 40px;
+}
+.block-purple img {
+    background-color: #ffffff; 
+    width: 100%;
+    height: 200px; 
+    object-fit: contain; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+.block-purple h3, 
+.block-purple p {
+    padding: 0 20px;
+}
+.block-purple h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.block-purple p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.partners img{
+    width: 20rem;
 }
 @media (min-width:1000px){
 .go-to {
