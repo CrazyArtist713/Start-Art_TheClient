@@ -34,8 +34,50 @@
     </header>
     <main>
         <div class="sub-header">
-            <h1>About</h1> 
+            <h1>Sign-Up</h1> 
             <img src="Images/Notepad.svg" alt="paper and pencil">
+        </div>
+        <form>
+            <div class="sign-up">
+                <div class="form-group select-wrapper">
+                <select name="appointment-course" required>
+                    <option value="" disabled selected hidden>Appointment or Course</option>
+                    <option value="appointment">Appointment</option>
+                    <option value="course">Course</option>
+                </select>
+            </div>
+            <div class="form-group select-wrapper">
+                <select name="consultant-name" required>
+                    <option value="" disabled selected hidden>Consultant or Course Name</option>
+                    <option value="consultant-1">Katherine Paisle | Career Consutant</option>
+                    <option value="consultant-2">Morgan Loslo | Career Consultant</option>
+                    <option value="consultant-3">Kiara Wan | Porfolio Consultant</option>
+                    <option value="course-1">How to make a Portfolio</option>
+                    <option value="course-2">Build your Resume</option>
+                    <option value="course-3">Creating Proposals</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <input type="time" name="times" placeholder="Times" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="fullname" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Phone Number ( Optional )">
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
         </div>
     </main>
     <footer>
