@@ -127,7 +127,7 @@ footer a:hover{
     font-style: normal;
     padding: 7rem;
     max-height: 100%;
-    text-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 10px 12px rgba(0, 0, 0, 0.8);
 }
 .home img{
     width: 5rem;
@@ -142,3 +142,21 @@ footer a:hover{
 .home a:hover{
     text-decoration:underline
 }
+.overview{
+    background-color: #b189c6;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.8);
+    margin: 3rem 5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #003270;
+}
+.overview h2{
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.overview p{
+    font-family: 'Tw Cen MT', sans-serif;
+    font-size: 25px;
+}
+
