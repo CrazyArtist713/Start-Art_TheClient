@@ -216,7 +216,6 @@ footer a:hover{
 }
 .signup:hover, .workshop:hover, .team:hover{
     background-color: #e85869;
-
 }
 .sub-header{
     background-color: #7a4e95;
@@ -340,6 +339,113 @@ form button[type="submit"]:active{
 form input:focus, 
 form select:focus{
   border-color: #ffc3ca;
+}
+.courses { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  gap: 2rem; 
+  margin: 4rem 5rem; 
+}
+.card{ 
+  display: flex; 
+  flex-direction: column; 
+  flex: 1; 
+  max-width: 380px; 
+  background-color: #ff8798; 
+  border-radius: 2rem; 
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.card:hover { 
+  background-color: #e85869; 
+}
+.card > img { 
+  width: 100%; 
+  height: 250px; 
+  object-fit: cover; 
+}
+.card-content {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.card-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Tw Cen MT', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.arrow-btn img {
+  width: 3.5rem; 
+  height: 3.5rem; 
+}
+.card-content p {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Tw Cen MT', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.workshops{ 
+    background-color: #9fd3ff; 
+    border-radius: 3rem; 
+    font-family: "franklin-gothic-atf", sans-serif; 
+    font-weight: 600; 
+    color: #003270; 
+    padding: 2rem; 
+}
+.workshop-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    
+}
+.voice, .ideas, .teamwork{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-size: cover;
+    background-position: center;
+}
+.voice{
+    background-image: url(Images/matt-botsford-OKLqGsCT8qs-unsplash-1024x576.jpg);
+    border: 4px solid #003270;
+}
+.teamwork{
+    background-image: url(Images/workshopd-1024x683.jpg);
+    border: 4px solid #003270;
+} 
+.ideas{
+    background-image: url(Images/project.svg);
+    border: 4px solid #003270;
+}
+.workshop-cards img{
+    width: 3rem;
+}
+.workshops hr{
+    border: 2px solid #003270;
+    border-radius: 1rem;
 }
 @media (min-width:1000px){
 .go-to {
