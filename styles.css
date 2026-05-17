@@ -540,14 +540,172 @@ form select:focus{
     line-height: 1.4;
 }
 .partners hr{
-    border: 3px solid #9fd3ff;
+    border: 1px solid #9fd3ff;
     border-radius: 1rem;
+    width: 90%;
 }
-.partners-header h2 {
-  font-size: 28px;
-  max-width: 60%;
+.partners h2 {
+    font-size: 28px;
+    max-width: 100%;
+    color: #9fd3ff;
+    font-family: "franklin-gothic-atf", sans-serif; 
+}
+.building{
+    height: 10rem;
+}
+.partner-head{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+}
+.office {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #ffffff;      
+    border-radius: 16px;           
+    overflow: hidden;               
+    color: #003270;             
+    font-family: 'Tw Cen MT', sans-serif;
+    width: 90%;
+    margin: 5rem auto;
+}
+.office > img, .office .hours {
+    grid-column: 1;
+}
+.office > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.office .hours {
+    background-color: #ffc3ca;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.office .hours h2 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.office .hours ul {
+    list-style-type: none;
+    padding: 0;
+}
+.office .hours li {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+.office > div:last-of-type {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.office h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.office h4 {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+    margin-top: 12px;
+    font-weight: 700;
+}
+.office p, .office a {
+    font-size: 0.88rem;
+    color: #003270;
+    text-decoration: none;
+    line-height: 1.4;
+}
+.office p {
+    white-space: pre-line; 
+}
+.directory{
+    margin: 4rem;
+}
+.directory-header{ 
+  width: 100%;
+  font-family: "franklin-gothic-atf", sans-serif; 
+  font-weight: 600; 
+  font-size: 2rem; 
+  color: #9fd3ff; 
+  margin-bottom: 0; 
+}
+.directory hr {
+    width: 100%;
+    border: 1px solid #9fd3ff; 
+    margin-bottom: 1rem; 
+    border-radius: 1rem; 
+}
+.directory-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Tw Cen MT', sans-serif;;
+}
+.contact {
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.profile-section {
+  flex: 0 0 40%;
+  background-color: #9fd3ff; 
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #003270;
+}
+.profile-section .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.profile-section .title {
+  font-size: 15px;
   margin: 0;
 }
+.info-section {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.info-section + .info-section {
+  border-left: 1px solid #dcdcdc; 
+}
+.label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #003270;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.value {
+  font-size: 15px;
+  color: #003270;
+  text-decoration: none;
+  word-break: break-all; /* Prevents long emails from breaking layout */
+}
+
+.value:hover {
+  text-decoration: underline;
+}
+
 @media (min-width:1000px){
 .go-to {
     display: flex;
