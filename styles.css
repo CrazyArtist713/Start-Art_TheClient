@@ -481,6 +481,7 @@ form select:focus{
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 .partners > h2, 
 .partners > hr, 
@@ -538,8 +539,14 @@ form select:focus{
     font-size: 0.95rem;
     line-height: 1.4;
 }
-.partners img{
-    width: 20rem;
+.partners hr{
+    border: 3px solid #9fd3ff;
+    border-radius: 1rem;
+}
+.partners-header h2 {
+  font-size: 28px;
+  max-width: 60%;
+  margin: 0;
 }
 @media (min-width:1000px){
 .go-to {
