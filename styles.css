@@ -1023,10 +1023,6 @@ article>div:first-of-type img{
   article > div:first-of-type{
     width: 300px;
   }
-  article>p{
-    font-size: 40px;
-    line-height: 1.4;
-  }
 }
 @media (min-width: 1563px){
     .hamburger{
