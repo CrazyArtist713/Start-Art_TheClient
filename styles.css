@@ -15,6 +15,7 @@ header{
     padding: 1rem;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 header a{
     width: 15rem;
@@ -434,14 +435,18 @@ form input:focus, form select:focus{
 
 }
 .voice, .ideas, .teamwork{
+  border-radius: 1.5rem; 
+}
+.voice a, .ideas a, .teamwork a{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 0 2rem 0 0;
-    border-radius: 1.5rem; 
+  
     background-size: cover; 
     background-position: center; 
     overflow: hidden;
+    text-decoration: none;
 }
 .voice{
     background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(Images/matt-botsford-OKLqGsCT8qs-unsplash-1024x576.jpg);
@@ -455,17 +460,14 @@ form input:focus, form select:focus{
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(Images/project.svg);
     border: 4px solid #003270;
 }
-.ideas h3, .voice h3, .teamwork h3{
+.ideas a h3, .voice a h3, .teamwork a h3{
     margin: 0;
     padding: 2.5rem;
     height: 100%;
     display: flex;
     align-items: center;
-    box-sizing: border-box; 
-}
-.ideas h3:hover, .voice h3:hover, .teamwork h3:hover{
-    background-color: #003270;
-    color: #ffffff;   
+    box-sizing: border-box;
+    color: #003270;
 }
 .workshop-cards img{
     width: 3rem;
@@ -473,6 +475,14 @@ form input:focus, form select:focus{
 .workshops hr{
     border: 2px solid #003270;
     border-radius: 1rem;
+}
+.voice a:hover h3, 
+.teamwork a:hover h3, 
+.ideas a:hover h3 {
+    background-color: #003270;
+    color: #ffffff;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 .partners{
     background-color: #1a64b5; 
@@ -805,9 +815,6 @@ form input:focus, form select:focus{
     font-size: 20px;
     font-family: 'Tw Cen MT', sans-serif;
 }
-.event-card a:hover{
-    background-color: #003270;
-}
 .event-card a:hover .event-details h3{
     color: #ffffff;
 }
@@ -830,6 +837,58 @@ form input:focus, form select:focus{
 }
 .Events, .meet-our-team, .consultants{
     margin: 3rem;
+}
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.block {
+  background-color: #9fd3ff;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; 
+  margin-bottom: 15px;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.block h3{
+  color: #003270;
+  font-size: 25px;
+  line-height: 1.4;
+  margin: 1rem 2rem 2rem 2rem;
+  text-align: left;
+  width: 100%;
+  padding-left: 40px;
+  font-family: 'Tw Cen MT', sans-serif;
+}
+.block h3 span{
+  display: inline-block;
+  font-weight: normal;
+}
+@media (max-width: 900px){
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (min-width:1000px){
 .go-to {
